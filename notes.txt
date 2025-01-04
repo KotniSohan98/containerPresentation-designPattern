@@ -1,0 +1,22 @@
+Container/Presentational Pattern
+
+
+Component:
+    Container(Smart)
+    Presentational(Dumb)
+
+Example:
+User Component
+    userContainer  ---- State,api calls and data fetching
+    userList presentation ----No Side Effects, Purely Presentational
+
+Pro:
+Seperation of Concerns - Here we divide the component into container and presentations    
+Improve Reusability - Presentational components can be easily reused in different parts of our applications
+Simplified Testing- Presentational components are easier to test as they are stateless and they don't rely on any of the effects or external data fetching.
+Enhanced Maintainability - As we use seperation of concerns the code is easy to Maintain and understand
+
+COns:
+Increased Boilerplate- This pattern introduces more files and Boilerplate code
+Overhead for small Applications- For small applications feels like over engeneering
+Potential Prop drilling- Presntation component purely depend on props. 
